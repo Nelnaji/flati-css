@@ -1,0 +1,24 @@
+@import "./colors";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 20vw;
+  gap: 2rem;
+  background-color: $bg-cream;
+  p {
+    font-size: 3rem;
+    width: 70%;
+    margin: 0 auto;
+    color: $grey;
+    b:first-child {
+      background-color: $bg-b-text;
+      color: $white;
+    }
+    .comp {
+      color: $bg-b-text;
+    }
+  }
+}
