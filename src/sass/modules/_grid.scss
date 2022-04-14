@@ -1,0 +1,17 @@
+@import "./colors";
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+  text-align: center;
+  padding-top: 4rem;
+  width: 80%;
+  margin: auto;
+  .grid-el {
+    background-color: $bg-cream;
+    border-radius: 0.5em;
+    width: 100%;
+    padding: 4rem;
+  }
+}
