@@ -1,1 +1,96 @@
 @import "./colors";
+
+.display-grid {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  width: 80%;
+  margin: 7rem auto;
+  .recent-work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40%;
+    gap: 1rem;
+    h3 {
+      color: $grey;
+      font-size: 1.4rem;
+      font-weight: 400;
+      @include responsive(phone) {
+        font-size: 1.8rem;
+      }
+    }
+    p {
+      color: $grey;
+      font-size: 1.1rem;
+      width: 60%;
+      @include responsive(phone) {
+        font-size: 1.3rem;
+      }
+    }
+    a {
+      text-decoration: none;
+      padding: 1em 1.4em;
+      background-color: $bg-b-text;
+      color: $white;
+      font-weight: 600;
+      border-radius: 0.3em;
+      @include responsive(phone) {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    .grid-4-el {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      background-color: $bg-dark;
+      color: $white;
+      border-radius: 0.5em;
+      overflow: hidden;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      img {
+        width: 100%;
+      }
+      p {
+        font-size: 1.1rem;
+        width: 80%;
+        margin: auto;
+      }
+    }
+  }
+  @include responsive(tablet-p) {
+    width: 90%;
+    .recent-work {
+      width: 60%;
+      p {
+        width: 80%;
+      }
+    }
+  }
+  @include responsive(tablet) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    .recent-work {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  @include responsive(phone) {
+    .grid-3 {
+      grid-template-columns: 1fr;
+    }
+  }
+}

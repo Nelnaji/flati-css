@@ -1,3 +1,5 @@
+@import "./media";
+
 *,
 *::after,
 *::before {
@@ -9,4 +11,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  @include responsive(tablet-p) {
+    font-size: 60%;
+  }
 }

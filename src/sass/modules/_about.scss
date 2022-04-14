@@ -5,9 +5,9 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 20vw;
   gap: 2rem;
   background-color: $bg-cream;
+  padding: 6rem 0;
   p {
     font-size: 3rem;
     width: 70%;
@@ -19,6 +19,22 @@
     }
     .comp {
       color: $bg-b-text;
+    }
+  }
+  @include responsive(tablet-p) {
+    p {
+      font-size: 2.4rem;
+    }
+  }
+  @include responsive(tablet) {
+    p {
+      font-size: 2rem;
+    }
+  }
+  @include responsive(phone) {
+    p {
+      font-size: 1.6rem;
+      width: 90%;
     }
   }
 }

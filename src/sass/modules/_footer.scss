@@ -1,0 +1,49 @@
+@import "./colors";
+
+.get-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $bg-b-text;
+  color: $white;
+  gap: 2.4rem;
+  padding: 3rem 0;
+  h2 {
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 0.2em;
+  }
+  p {
+    font-size: 1.4rem;
+    width: 80%;
+  }
+  .icon-wrap {
+    display: flex;
+    gap: 2rem;
+    .icon {
+      font-size: 4rem;
+      color: rgba(188, 247, 255, 0.733);
+      @include responsive(phone) {
+        font-size: 2rem;
+      }
+    }
+  }
+  @include responsive(tablet) {
+    h2 {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.end-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  background-color: $bg-dark;
+  color: $wt;
+  font-size: 1.4rem;
+  text-align: center;
+}
